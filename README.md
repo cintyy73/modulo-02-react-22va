@@ -1,8 +1,6 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ejercicio: TextArea con color dinámico
+Objetivo: Crear un TextArea que cambie su color de fondo según la cantidad de caracteres ingresados usando Chakra UI v2.
+Reglas de color:
+Fondo blanco: Si el texto tiene menos de 50 caracteres.
+Fondo amarillo: Si el texto tiene entre 50 y 100 caracteres.
+Fondo rojo: Si el texto tiene más de 100 caracteres.
