@@ -1,9 +1,15 @@
-import { Axios } from './Axios'
+// import { Welcome } from './components/Welcome'
+import { Cart } from './components/Cart'
+import {List } from  './components/List'
 
 function App() {
 
   return (
-    <Axios/>
+  <>
+  <Cart />
+   {/* <Welcome /> */}
+    <List />
+  </>
   )
 }
 
