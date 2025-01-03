@@ -1,12 +1,14 @@
 
 import { VStack } from '@chakra-ui/react'
-import { Form } from './components/Form'
+import { LoginForm } from './components/LoginForm'
+import { UserDashboard } from './components/UserDashboard'
+import { useAuth } from './context/AuthContext'
 
 function App() {
-
+ const { user} = useAuth()
   return (
     <VStack>
-      <Form />
+     {user ? <UserDashboard /> :  <LoginForm />}
     </VStack>
   )
 }
