@@ -9,34 +9,34 @@ El form validado con react hook form
 
 ---
 
-**Consigna del ejercicio 2:** Crear y manejar un modal utilizando un Custom Hook.
+**Consigna del ejercicio 2:** Crear y manejar un modal utilizando un Custom Hook. ✅
 
 **Objetivo principal:**
 1. Crear un custom hook (`useModal`) que gestione el estado de un modal (abierto o cerrado).
 2. Usar este hook en un componente para abrir, cerrar o alternar la visibilidad de un modal.
 
-**Pasos del ejercicio:**
+# Custom Hooks
 
-**Paso 1: Crear el custom hook `useModal`:**
-- Usa `useState` para manejar el estado del modal (`isOpen`).
-- Define funciones:
-  - `openModal`: Abre el modal configurando el estado a `true`.
-  - `closeModal`: Cierra el modal configurando el estado a `false`.
-  - `toggleModal`: Alterna el estado del modal entre abierto y cerrado.
-- Retorna el estado (`isOpen`) y las funciones (`openModal`, `closeModal`, `toggleModal`) para que puedan ser usadas en otros componentes.
 
-**Paso 2: Implementar el hook en un componente que utilice un modal:**
-- Usa las funciones proporcionadas por el hook (`openModal`, `closeModal`, `toggleModal`) para controlar el modal.
-- Implementa un botón que llame a `openModal` para abrir el modal.
-- Usa un modal de Chakra UI o cualquier otra biblioteca para renderizar el modal.
 
-**Requisitos del componente:**
-1. Un botón que llame a `openModal` para abrir el modal.
-2. El modal debe:
-   - Mostrar un título (en `ModalHeader`).
-   - Contener un cuerpo con contenido (en `ModalBody`).
-   - Tener un pie de página con un botón para cerrarlo (en `ModalFooter`).
-3. Implementar `closeModal` en el botón de cierre del modal y en el evento `onClose`.
+### Crea un custom hook que haga una solicitud GET a una API de noticias y devuelva el resultado.
 
---- 
+- El hook debe aceptar un parámetro que sea la URL de la API, y utilizar useEffect para hacer la solicitud al montar el componente.
+
+### Crea un custom hook que maneje la lógica de paginación de una lista de elementos.
+
+- Debe tener un estado para la página actual y otro para el número de elementos por página.
+- Dos funciones que permitan actualizar ambos estados.
+- Además, debe tener una función que calcule el índice de los elementos a mostrar en la página actual.
+
+### Crea un custom hook que maneje el estado de un formulario de login. ✅
+
+- Debe tener un estado para el email y otro para la contraseña.
+- Dos funciones que permitan actualizar ambos estados.
+- Además, debe tener una función que maneje la lógica de envío de datos.
+
+### Crear un custom hook de un contador ✅
+
+- El hook debe aceptar un parámetro que sea el valor inicial del contador, que por defecto sea 0.
+- Debe tener la funcionalidad de sumar, restar y resetear el contador.
 
