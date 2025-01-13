@@ -1,44 +1,35 @@
-import { Text, VStack } from "@chakra-ui/react";
-import { LoginForm } from "./components/LoginForm";
-import { UserDashboard } from "./components/UserDashboard";
-import { useAuth } from "./context/AuthContext";
-import { Display } from "./components/count/Display";
-import { Controls } from "./components/count/Controls";
-import { ModalChakra } from "./components/ModalChakra";
-import { Modal } from "./modal/Modal";
-import { Accordion } from "./accordion/Accordion";
+
+
+import { Login } from "./pages/Login";
+import { Route, Routes } from "react-router-dom";
+import { Header } from "./layout/Header";
+import { Home } from "./pages/Home";
+import { Register } from "./pages/Register";
+
+import './App.css'
+import { Users } from "./pages/Users";
+import { UsersDetails } from "./pages/UsersDetails";
 
 function App() {
-  const { user } = useAuth();
-  return (
-    <VStack>
-      {user ? <UserDashboard /> : <LoginForm />}
-      <Display />
+// SPA antes haciamos todo en app
+// <Routes/> genera un arbol de rutas y a partir de este nos permite reemplazar la vista de cada componente/pagina que coincida con la url del navegador
 
-      <Controls />
-      <ModalChakra />
-      <Accordion title="Desplegar lista" >
-        <Text>1</Text>
-        <Text>2</Text>
-        <Text>3</Text>
-        <Text>4</Text>
-      </Accordion>
-      <Accordion title="Alumnas" >
-        <Text>1. Meli</Text>
-        <Text>2. Jaz</Text>
-        <Text>3. Naty</Text>
-        <Text>4. Molly</Text>
-      </Accordion>
-      <Modal>
-        <p>Hola mundo</p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quam
-          facilis sed adipisci, eaque, cumque, nemo dicta aperiam eius tempora
-          blanditiis rem repellat nostrum! Iste illum laborum quidem iusto
-          recusandae.
-        </p>
-      </Modal>
-    </VStack>
+// <Route /> Representa una ruta en el "arbol" y necesitamos si o si el path (la url del navegador) y el element (componente/pagina)
+  return (
+    <div className="app">
+      <Header/>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/login" element={ <Login />}/>
+        <Route path="/register" element={ <Register />}/>
+
+        <Route path="/users" element={<Users/>}/>
+        <Route path="/users/:id" element={<UsersDetails/>}/>
+
+
+      </Routes>
+
+    </div>
   );
 }
 

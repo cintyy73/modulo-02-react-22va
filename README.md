@@ -31,7 +31,7 @@ El form validado con react hook form
 
 ### Crea un custom hook que maneje el estado de un formulario de login. ✅
 
-- Debe tener un estado para el email y otro para la contraseña.
+- Debe tener un estado para el email y la contraseña.
 - Dos funciones que permitan actualizar ambos estados.
 - Además, debe tener una función que maneje la lógica de envío de datos.
 
