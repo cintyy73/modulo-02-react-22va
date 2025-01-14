@@ -1,42 +1,49 @@
-# ejercitación
 
-1. Crea un context para manejar la autenticación en una aplicación.
-2. El context debe tener un estado para el usuario autenticado.
-3. un método para iniciar sesión
-4. otro método para cerrar sesión.
+## **Ejercicio**
 
-El form validado con react hook form
+1. **Crear una aplicación que simule una tienda utilizando React Router.**
+2. Define las siguientes rutas principales usando `Routes` y `Route`:
+   - `/`: Página de inicio con un mensaje de bienvenida.
+   - `/products`: Muestra una lista de productos con sus nombres como enlaces.
+   - `/products/:id`: Muestra el detalle de un producto seleccionado utilizando `useParams`.
+   - `*`: Página de error 404 que indique "Página no encontrada".
+3. Usa `Link` o `NavLink` para navegar entre las rutas.
+4. Al hacer clic en un producto, redirige al detalle (`/products/:id`).
+5. En el detalle, muestra información como:
+   - `id`
+   - `nombre`
+   - `descripción`
+   - `precio` ymas detalles que quieran agregar
+   - Puedes agregar imagenes si deseas
+6. Asegúrate de manejar rutas inexistentes mostrando la página 404.
 
 ---
 
-**Consigna del ejercicio 2:** Crear y manejar un modal utilizando un Custom Hook. ✅
+## **Puntos clave para implementar**
 
-**Objetivo principal:**
-1. Crear un custom hook (`useModal`) que gestione el estado de un modal (abierto o cerrado).
-2. Usar este hook en un componente para abrir, cerrar o alternar la visibilidad de un modal.
+1. **Rutas principales:**
 
-# Custom Hooks
+   - Configura las rutas usando el componente `Routes` y define cada ruta con `Route`.
+
+2. **Navegación entre rutas:**
+
+   - Usa los componentes `Link` o `NavLink` para que los usuarios puedan navegar fácilmente.
+
+3. **Detalle de productos:**
+
+   - Utiliza `useParams` para capturar el `id` de los productos desde la URL y mostrar sus detalles correspondientes.
+
+4. **Página de error 404:**
+
+   - Implementa una ruta comodín (`*`) para capturar rutas inexistentes y renderizar una página de error personalizada.
+
+---
+
+## **Requisitos adicionales**
+
+- Usa un array de productos predefinido para mostrar la lista y los detalles.
+- Dale estilo a la aplicación para mejorar la experiencia visual.
+- Valida que el producto exista antes de mostrar sus detalles; en caso contrario, muestra un mensaje de "Producto no encontrado".
 
 
-
-### Crea un custom hook que haga una solicitud GET a una API de noticias y devuelva el resultado.
-
-- El hook debe aceptar un parámetro que sea la URL de la API, y utilizar useEffect para hacer la solicitud al montar el componente.
-
-### Crea un custom hook que maneje la lógica de paginación de una lista de elementos.
-
-- Debe tener un estado para la página actual y otro para el número de elementos por página.
-- Dos funciones que permitan actualizar ambos estados.
-- Además, debe tener una función que calcule el índice de los elementos a mostrar en la página actual.
-
-### Crea un custom hook que maneje el estado de un formulario de login. ✅
-
-- Debe tener un estado para el email y la contraseña.
-- Dos funciones que permitan actualizar ambos estados.
-- Además, debe tener una función que maneje la lógica de envío de datos.
-
-### Crear un custom hook de un contador ✅
-
-- El hook debe aceptar un parámetro que sea el valor inicial del contador, que por defecto sea 0.
-- Debe tener la funcionalidad de sumar, restar y resetear el contador.
 
