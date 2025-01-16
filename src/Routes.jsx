@@ -13,7 +13,7 @@ const Routes = () => {
       <Route path="/products" element={<Products />} />
       <Route path="/products/:id" element={<ProductDetails/>}/>
       <Route path="*" element={<NotFound />} />
-      {/* <Route path='/mockapi' element={<MockapiFetch/>}/> */}
+      <Route path='/mockapi' element={<MockapiFetch/>}/>
     </RoutesReact>
   );
 };
