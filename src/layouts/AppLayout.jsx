@@ -5,6 +5,7 @@ import Header from "../components/Header";
 
 import Routes from "../Routes";
 
+import ScrollToTop from '../components/ScrollToTop'
 const AppLayout = () => {
   return (
     <Grid
@@ -19,6 +20,8 @@ const AppLayout = () => {
       <Header />
 
       <GridItem pl="2" bg="green.300" area={"main"}>
+      <ScrollToTop />
+        
         <Routes />
       </GridItem>
       <Footer />

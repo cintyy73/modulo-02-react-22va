@@ -1,7 +1,9 @@
 import { Card as CardChakra, CardBody, CardFooter, Divider, Heading, Image, Stack, Text, ButtonGroup, Button } from '@chakra-ui/react'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Card = ({product}) => {
+  const { id, name, price} = product
   return (
     <CardChakra maxW='sm'>
     <CardBody>
@@ -11,26 +13,22 @@ const Card = ({product}) => {
         borderRadius='lg'
       />
       <Stack mt='6' spacing='3'>
-        <Heading size='md'>{product.name}</Heading>
-        <Text>
-          This sofa is perfect for modern tropical spaces, baroque inspired
-          spaces, earthy toned spaces and for people who love a chic design with a
-          sprinkle of vintage design.
-        </Text>
+        <Heading size='md'>{name}</Heading>
+     
         <Text color='blue.600' fontSize='2xl'>
-          $450
+          $ {price}
         </Text>
       </Stack>
     </CardBody>
     <Divider />
     <CardFooter>
       <ButtonGroup spacing='2'>
-        <Button variant='solid' colorScheme='blue'>
+        <Button as={Link} to={`${id}`} variant='solid' colorScheme='blue'>
          Ver más
         </Button>
-        <Button variant='ghost' colorScheme='blue'>
+        {/* <Button variant='ghost' colorScheme='blue'>
           Add to cart
-        </Button>
+        </Button> */}
       </ButtonGroup>
     </CardFooter>
   </CardChakra>
